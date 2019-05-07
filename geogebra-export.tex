@@ -1,0 +1,52 @@
+\documentclass[10pt]{article}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.11}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{qqqqcc}{rgb}{0,0,0.8}
+\definecolor{ccqqqq}{rgb}{0.8,0,0}
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\begin{axis}[
+x=1cm,y=1cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-5.1169818034374615,
+xmax=4.29355638761788,
+ymin=-7.339934202831315,
+ymax=22.76690932682688,
+xtick={-5,-4,...,4},
+ytick={-6,-4,...,22},]
+	\clip(-5.1169818034374615,-7.339934202831315) rectangle (4.29355638761788,22.76690932682688);
+	\draw[line width=2pt,color=ccqqqq,smooth,samples=100,domain=-5.1169818034374615:4.29355638761788] plot(\x,{(\x)^(2)});
+	\draw[line width=2pt,smooth,samples=100,domain=-5.1169818034374615:4.29355638761788] plot(\x,{2^((\x))});
+	\draw [line width=2pt,dash pattern=on 1pt off 1pt] (-0.7666646959729161,0.5877747560512439)-- (-0.7662706756552756,0);
+	\draw [line width=2pt,dash pattern=on 1pt off 1pt] (2,4)-- (2,0);
+	\draw [line width=2pt,dash pattern=on 1pt off 1pt] (3.999999999903892,15.999999998934127)-- (4,0);
+	\begin{scriptsize}
+		\draw[color=ccqqqq] (-4.13330185315293,22.559116695103775) node {$f(x)=x^2$};
+		\draw[color=black] (-4.379221840724062,-0.11336823290568987) node {$g(x)=2^x$};
+		\draw [fill=qqqqcc] (2,4) circle (2pt);
+		\draw[color=qqqqcc] (2.1294604969919133,4.9198310688316464) node {$B$};
+		\draw [fill=uuuuuu] (3.999999999903892,15.999999998934127) circle (2pt);
+		\draw[color=uuuuuu] (4.11321506339905,16.87945142800568) node {$C$};
+		\draw [fill=qqqqcc] (-0.7666646959729161,0.5877747560512439) circle (2pt);
+		\draw[color=qqqqcc] (-0.6412380296428473,1.502796680496207) node {$A$};
+		\draw [fill=black] (-0.7662706756552756,0) circle (2.5pt);
+		\draw[color=black] (-0.6412380296428473,0.9948591362841823) node {$D$};
+		\draw[color=black] (-0.9691313464043575,0.8563307151354482) node {$h$};
+		\draw [fill=black] (2,0) circle (2.5pt);
+		\draw[color=black] (2.1294604969919133,0.9948591362841823) node {$E$};
+		\draw[color=black] (1.8015671802304034,2.564847909303168) node {$i$};
+		\draw [fill=black] (4,0) circle (2.5pt);
+		\draw[color=black] (4.129609729237126,0.9948591362841823) node {$F$};
+		\draw[color=black] (3.8017164124756153,8.567746159081642) node {$j$};
+		
+	\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
+\end{document}

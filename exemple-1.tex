@@ -1,0 +1,96 @@
+\documentclass[11pt]{report}
+% PACKAGES
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{color}
+\usepackage[dvips]{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+
+\setlength{\headsep}{0cm}
+% DIST\^{A}NCIA TEXTO/CABE\c{C}ALHO
+
+\setlength{\textwidth}{18cm}
+% LARGURA DO TEXTO
+
+\setlength{\textheight}{22.5cm}
+% ALTURA DO TEXTO
+
+\setlength{\oddsidemargin}{-1cm}
+% MARGEM \'{I}MPAR
+
+\setlength{\evensidemargin}{0cm}
+% MARGEM PAR
+
+\setlength{\topmargin}{0cm}
+% MARGEM SUPERIOR
+
+\renewcommand{\baselinestretch}{1.1}
+% DIST\^{A}NCIA ENTRE LINHAS
+
+\pretolerance=10000
+
+\begin{document}
+	\thispagestyle{empty}
+
+	% DISPLAY IMAGE AND TITLE
+	\noindent
+	\begin{minipage}[c]{0.2\linewidth}
+		\includegraphics{sm-ufpb-logo.png}
+	\end{minipage} % no space if you would like to put them side by side
+	\begin{minipage}[c]{0.7\linewidth}
+		\begin{center}
+			UFPB/CCEN/DMPGMAT \\
+			$\mbox{Análise no} \ \mathbb{R}^{n}$ \\
+			Exame de Qualificação -- 2012.2
+		\end{center}
+	\end{minipage}
+
+	\vspace{0.8cm}
+	
+	% PLACE THE NAME AND NUMBER
+	Nome:\rule{10cm}{0.1mm}
+	Matrícula:\rule{3cm}{0.1mm}
+	\vspace{1cm}
+	
+	% BEGIN THE TEXT
+	\begin{enumerate}
+		\item Dados dois conjuntos $X, Y \subset \mathbb{R}^{n}$ definimos $d(X, Y) = \inf\{|x - y|; x \in X,y \in Y\}$
+		\begin{enumerate}
+			\item[a)] Dado $x \in \mathbb{R}^{n}$ e $Y \subset \mathbb{R}^{n}$, mostre que $d(x,Y) = d(x,\overline{Y}).$
+			
+			\item[b)] Mostre que $d(x, Y) = 0 \Leftrightarrow x \in Y.$
+			
+			\item[c)] Mostre que $d(X, Y) = d(\overline{X}, \overline{Y}).$
+		\end{enumerate}
+
+		\item Seja $ T: \mathbb{R}^{n} \rightarrow \mathbb{R}^{m}$ uma transformação linear. Mostre que são equivalentes as seguintes afirmações:
+		\begin{enumerate}
+			\item[a)] $|Tx|=|x|, \forall x \in \mathbb{R}^{n}$.
+			
+			\item[b)] $|Tx - Ty| = |x - y|, \forall x,y \in \mathbb{R}^{n}$.
+			
+			\item[c)] $\langle Tx, Ty \rangle = \langle x,y \rangle, \forall x,y \in \mathbb{R}^{n}$.
+		\end{enumerate}
+	
+		\item Mostre que se $f : \mathbb{R}^{n} \rightarrow \mathbb{R}$ é uma transformação linear então existe único $y \in \mathbb{R}^{n}$ tal que $f(x) = \langle x, y \rangle, \forall x \in \mathbb{R}^{n}$.
+		
+		\item Seja $f : \mathbb{R}^{2} \rightarrow \mathbb{R}$ e $g : \mathbb{R} \rightarrow \mathbb{R}^{2}$ funções de classe $C^{1}$.
+		\begin{enumerate}
+			\item[a)] Mostre que $f$ não pode ser injetiva. \textit{(Sugestão: Use o teorema da função implícita caso haja $x \in \mathbb{R}^{2}$ com $Df(x) \neq 0$.)}
+			
+			\item[b)] Mostre que $g$ não pode ser sobrejetiva.
+		\end{enumerate}
+	
+		\item Seja $f : \mathbb{R} \rightarrow \mathbb{R}$ uma aplicação de classe $C^{1}$ tal que $|f\prime(t) \leq k < 1$ para todo $t \in \mathbb{R}$. Considere a aplicação $\phi : \mathbb{R}^{2} \rightarrow \mathbb{R}^{2}$ dada por $\phi(x, y) = (x + f(y), y + f(x))$. Mostre que $\phi$ é um difeomorfismo. \\
+		\textit{Sugestão: Mostre que $\phi$ é um difeomorfismo local e injetiva.}
+		
+		\item Sejam $\phi, \psi : [a, b] \rightarrow \mathbb{R}$ duas funções contínuas tais que $\phi(x) \leq \psi(x)$ para todo $x \in \mathbb{R}$. Considere $X = \{(x, y) \in \mathbb{R}^{2}; x \in [a, b], \phi(x) \leq y \leq \psi(x) \}$.
+		
+		\begin{enumerate}
+			\item[a)] Mostre que $X$ é $J$-mensurável. \textit{(Sugestão: determine $\partial X$.)}
+			
+			\item[b)] Dada $f : X \rightarrow\mathbb{R}$ contínua, mostre que \\
+			$$\int_X f = \int_{a}^{b} dx \int_{\phi(x)}^{\psi(x)} f(x, y)dy$$.
+		\end{enumerate}
+	\end{enumerate}
+\end{document}
