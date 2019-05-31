@@ -1,0 +1,53 @@
+\documentclass[11pt]{report}
+% PACKAGES
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{color}
+\usepackage[dvips]{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+
+\setlength{\headsep}{0cm}
+% DIST\^{A}NCIA TEXTO/CABE\c{C}ALHO
+
+\setlength{\textwidth}{18cm}
+% LARGURA DO TEXTO
+
+\setlength{\textheight}{22.5cm}
+% ALTURA DO TEXTO
+
+\setlength{\oddsidemargin}{-1cm}
+% MARGEM \'{I}MPAR
+
+\setlength{\evensidemargin}{0cm}
+% MARGEM PAR
+
+\setlength{\topmargin}{0cm}
+% MARGEM SUPERIOR
+
+\renewcommand{\baselinestretch}{1.1}
+% DIST\^{A}NCIA ENTRE LINHAS
+
+\pretolerance=10000
+
+\begin{document}
+	\thispagestyle{empty}
+
+	\begin{center}
+	Escreva esse texto em modo centralizado, \textit{deixando essa parte em itálico} e \textbf{essa parte em negrito}.
+	\end{center}
+	
+	\hspace*{\fill}Escreva esse texto no lado esquerdo, com essa {\huge palavra} em tamanho huge. \\
+	
+    Comprove que sabe iniciar um novo parágrafo e escreva a seguinte equação enumerada:
+	$$
+	f(x)=
+	\left 
+		\{
+			\begin{array}{ccl}
+				x^3 + \frac{5}{x} & \mbox {se} & x <= 0 \\
+				-\sum + 5 & \mbox{se} & 0 < x <= 1
+			\end{array}
+	\right.
+	$$
+	
+\end{document}
