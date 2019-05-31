@@ -39,15 +39,31 @@
 	\hspace*{\fill}Escreva esse texto no lado esquerdo, com essa {\huge palavra} em tamanho huge. \\
 	
     Comprove que sabe iniciar um novo parágrafo e escreva a seguinte equação enumerada:
-	$$
-	f(x)=
-	\left 
-		\{
-			\begin{array}{ccl}
-				x^3 + \frac{5}{x} & \mbox {se} & x \leq 0 \\
-				-\sum\limits_{n=1}^{\infty} \frac{e^{nx}}{n!} & \mbox{se} & 0 < x \leq 1
-			\end{array}
-	\right.
-	$$
+    \begin{equation}
+    f(x)=
+    \left 
+    \{
+    \begin{array}{ccl}
+    x^3 + \frac{5}{x} & \mbox {se} & x \leq 0 \\
+    -\sum\limits_{n=1}^{\infty} \frac{e^{nx}}{n!} & \mbox{se} & 0 < x \leq 1
+    \end{array}
+    \right. \label{eq:1}
+    \end{equation}
+
+	\begin{flushleft}
+		Agora vamos fazer enumerações em cadeia
+		\begin{enumerate}
+			\item Primeiro item e seus subitens:
+			\begin{enumerate}
+				\item [i)] subitem i.
+				\item [ii)] subitem ii.
+			\end{enumerate}
+			\item Segundo item.
+		\end{enumerate}
 	
+		Agora comprovo aqui que sei mencionar uma equação enumerada: basta observar a equação \eqref{eq:1}, por exemplo.
+		\\
+		Inicio abaixo uma seção.
+	\end{flushleft}
+
 \end{document}
